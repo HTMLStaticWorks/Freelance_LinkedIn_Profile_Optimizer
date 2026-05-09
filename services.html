@@ -9,6 +9,7 @@
         content="Explore our range of professional LinkedIn optimization and career branding services.">
 
     <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
     <!-- Fonts -->
@@ -28,7 +29,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=1.7">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.8">
 </head>
 
 <body class="font-body smooth-scroll">
@@ -52,7 +53,8 @@
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto gap-3 gap-lg-4">
-                        <li class="nav-item dropdown">
+                        <!-- Desktop Home Dropdown (Visible on Desktop) -->
+                        <li class="nav-item dropdown d-nav-desktop">
                             <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Home
@@ -61,6 +63,14 @@
                                 <li><a class="dropdown-item" href="index.html">Home 1 - Corporate</a></li>
                                 <li><a class="dropdown-item" href="home-2.html">Home 2 - Personal</a></li>
                             </ul>
+                        </li>
+
+                        <!-- Mobile Home Links (Visible on Mobile) -->
+                        <li class="nav-item d-nav-mobile">
+                            <a class="nav-link" href="index.html">Home 1 - Corporate</a>
+                        </li>
+                        <li class="nav-item d-nav-mobile">
+                            <a class="nav-link" href="home-2.html">Home 2 - Personal</a>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>

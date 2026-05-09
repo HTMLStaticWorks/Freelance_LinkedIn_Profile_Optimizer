@@ -146,6 +146,11 @@ body {
     line-height: 1.6;
     background-color: var(--white);
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 h1,
@@ -458,6 +463,26 @@ header.scrolled nav {
 
     .navbar-expand-custom .navbar-toggler {
         display: none !important;
+    }
+
+    /* Desktop Navigation Visibility */
+    .d-nav-mobile {
+        display: none !important;
+    }
+
+    .d-nav-desktop {
+        display: block !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Mobile Navigation Visibility */
+    .d-nav-desktop {
+        display: none !important;
+    }
+
+    .d-nav-mobile {
+        display: block !important;
     }
 }
 
@@ -818,9 +843,16 @@ footer.bg-light a {
     border-color: var(--primary) !important;
 }
 
-/* Scroll Lock for Mobile Menu */
+/* Scroll Lock for Mobile Menu & Fix for layout shift */
 body.overflow-hidden {
     overflow: hidden !important;
+    padding-right: 0 !important;
+}
+
+body.overflow-hidden .fixed-top,
+body.overflow-hidden .fixed-bottom,
+body.overflow-hidden .sticky-top {
+    padding-right: 0 !important;
 }
 
 /* LinkedIn Expert Badge - Perfect Circle */
