@@ -26,29 +26,10 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <style>
-        body {
-            background-color: var(--gray-50);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
 
-        .auth-card {
-            width: 100%;
-            max-width: 500px;
-            background: white;
-            border-radius: 40px;
-            border: 1px solid var(--gray-100);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-            padding: 50px;
-        }
-    </style>
 </head>
 
-<body class="font-body">
+<body class="font-body auth-page">
 
     <div class="auth-toggles">
         <button type="button" id="theme-toggle" class="btn-icon" aria-label="Toggle theme">
@@ -60,7 +41,7 @@
         </button>
     </div>
 
-    <div class="auth-card my-5">
+    <div class="auth-card auth-card-register my-5">
         <!-- Logo -->
         <div class="text-center mb-5">
             <a class="navbar-brand d-flex align-items-center justify-content-center gap-2" href="index.html">

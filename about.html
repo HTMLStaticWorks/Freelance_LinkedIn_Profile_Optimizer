@@ -9,7 +9,7 @@
         content="Learn about our mission to empower professionals through strategic LinkedIn branding and profile optimization.">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,8 @@
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto gap-3 gap-lg-4">
-                        <li class="nav-item dropdown">
+                        <!-- Desktop Home Dropdown -->
+                        <li class="nav-item dropdown d-nav-desktop">
                             <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Home
@@ -61,6 +62,14 @@
                                 <li><a class="dropdown-item" href="index.html">Home 1 - Corporate</a></li>
                                 <li><a class="dropdown-item" href="home-2.html">Home 2 - Personal</a></li>
                             </ul>
+                        </li>
+
+                        <!-- Mobile Home Links -->
+                        <li class="nav-item d-nav-mobile">
+                            <a class="nav-link" href="index.html">Home 1 - Corporate</a>
+                        </li>
+                        <li class="nav-item d-nav-mobile">
+                            <a class="nav-link" href="home-2.html">Home 2 - Personal</a>
                         </li>
                         <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -222,8 +231,8 @@
     </section>
 
     <!-- Section 5: Global Footprint -->
-    <section class="py-4 bg-secondary text-white">
-        <div class="container py-4">
+    <section class="py-5 bg-secondary text-white">
+        <div class="container py-5">
             <div class="row align-items-center g-5 text-center text-lg-start">
                 <div class="col-lg-5">
                     <div class="p-1 bg-white rounded-5 shadow-2xl">

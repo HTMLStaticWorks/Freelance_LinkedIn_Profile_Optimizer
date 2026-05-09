@@ -54,7 +54,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto gap-3 gap-lg-4">
                         <!-- Desktop Home Dropdown (Visible on Desktop) -->
-                        <li class="nav-item dropdown d-none d-lg-block">
+                        <li class="nav-item dropdown d-nav-desktop">
                             <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
                                 Home
@@ -66,10 +66,10 @@
                         </li>
 
                         <!-- Mobile Home Links (Visible on Mobile) -->
-                        <li class="nav-item d-lg-none">
+                        <li class="nav-item d-nav-mobile">
                             <a class="nav-link active" href="index.html">Home 1 - Corporate</a>
                         </li>
-                        <li class="nav-item d-lg-none">
+                        <li class="nav-item d-nav-mobile">
                             <a class="nav-link" href="home-2.html">Home 2 - Personal</a>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -224,22 +224,34 @@
     <section class="py-5 bg-light">
         <div class="container py-5 text-center">
             <h2 class="display-6 fw-bold mb-5 font-heading">Case Study: Global Tech Transformation</h2>
-            <div class="bg-white p-5 rounded-5 shadow-xl text-start mx-auto max-w-4xl">
-                <div class="row align-items-center g-5 text-center text-md-start">
+            <div class="bg-white rounded-5 shadow-xl text-start mx-auto max-w-5xl overflow-hidden">
+                <div class="row g-0 align-items-stretch">
                     <div class="col-md-5">
                         <img src="assets/images/audit_report_preview.png" alt="Case Study"
-                            class="img-fluid rounded-4 shadow-sm case-study-img">
+                            class="img-fluid case-study-cover">
                     </div>
-                    <div class="col-md-7">
-                        <h4 class="fw-bold mb-3 font-heading">The 40% Growth Story</h4>
-                        <p class="text-muted small mb-4">"We optimized the profiles of 15 senior directors at a Fortune
-                            500 company. Within 6 months, their organic reach increased by 400%, resulting in $2.4M in
-                            new partnership leads."</p>
-                        <div class="d-flex gap-3 align-items-center justify-content-center justify-content-md-start">
-                            <div class="bg-primary-soft p-2 rounded-circle"><i data-lucide="trending-up"
-                                    class="text-primary w-4 h-4"></i></div>
-                            <span class="fw-bold small text-secondary">400% Reach Increase</span>
+                    <div class="col-md-7 p-5 d-flex flex-column justify-content-center">
+                        <div class="badge bg-primary-soft text-primary rounded-pill px-3 py-2 mb-3 align-self-start">Corporate Turnaround</div>
+                        <h3 class="fw-bold mb-4 font-heading">The 40% Growth Story</h3>
+                        <p class="lead text-muted mb-4">"We optimized the profiles of 15 senior directors at a Fortune 500 company. Within 6 months, their organic reach increased by 400%, resulting in $2.4M in new partnership leads."</p>
+                        <p class="text-muted mb-5">By implementing our proprietary Authority Framework, we didn't just update their text; we reconstructed their digital identities. Each profile now speaks directly to executive recruiters, highlighting key performance indicators and leadership philosophies that were previously hidden.</p>
+                        
+                        <div class="row g-4 mb-5">
+                            <div class="col-6">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <div class="bg-primary-soft p-2 rounded-circle"><i data-lucide="trending-up" class="text-primary w-4 h-4"></i></div>
+                                    <span class="fw-bold small text-secondary">400% Reach Increase</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <div class="bg-primary-soft p-2 rounded-circle"><i data-lucide="users" class="text-primary w-4 h-4"></i></div>
+                                    <span class="fw-bold small text-secondary">15 Executives Optimized</span>
+                                </div>
+                            </div>
                         </div>
+
+                        <a href="contact.html" class="btn btn-primary rounded-pill px-4 align-self-start">Read Full Case Study</a>
                     </div>
                 </div>
             </div>

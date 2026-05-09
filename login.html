@@ -26,29 +26,10 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <style>
-        body {
-            background-color: var(--gray-50);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
 
-        .auth-card {
-            width: 100%;
-            max-width: 450px;
-            background: white;
-            border-radius: 40px;
-            border: 1px solid var(--gray-100);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-            padding: 50px;
-        }
-    </style>
 </head>
 
-<body class="font-body">
+<body class="font-body auth-page">
 
     <div class="auth-toggles">
         <button type="button" id="theme-toggle" class="btn-icon" aria-label="Toggle theme">
@@ -60,7 +41,7 @@
         </button>
     </div>
 
-    <div class="auth-card">
+    <div class="auth-card auth-card-login">
         <!-- Logo -->
         <div class="text-center mb-5">
             <a class="navbar-brand d-flex align-items-center justify-content-center gap-2" href="index.html">
@@ -95,7 +76,8 @@
                 </div>
             </div>
 
-            <div class="d-flex justify-content-between align-items-center small fw-bold">
+            <div
+                class="d-flex flex-column flex-sm-row justify-content-between align-items-center align-items-sm-center gap-3 small fw-bold">
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="remember">
                     <label class="form-check-label text-muted" for="remember">Remember Me</label>
@@ -122,8 +104,7 @@
         </div>
 
         <p class="text-center mt-5 small text-muted">
-            Don't have an account? <a href="register.html" class="text-primary fw-bold text-decoration-none">Create
-                Account</a>
+            Don't have an account? <a href="register.html" class="text-primary fw-bold text-decoration-none">Signup</a>
         </p>
     </div>
 
