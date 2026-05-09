@@ -1047,6 +1047,9 @@ body.overflow-hidden .sticky-top {
 /* Scroll Lock for Mobile Menu */
 body.overflow-hidden {
     overflow: hidden !important;
+    height: 100vh !important;
+    width: 100% !important;
+    position: fixed !important;
 }
 
 /* LinkedIn Expert Badge - Perfect Circle */
@@ -1129,3 +1132,18 @@ body.overflow-hidden {
 @media (max-width: 575px) { .auth-page { justify-content: flex-start !important; padding-top: 100px !important; padding-left: 10px !important; padding-right: 10px !important; } .auth-card { padding: 30px 18px !important; /* Reduced padding to increase input width */ } .auth-toggles { top: 20px !important; right: 20px !important; gap: 10px !important; position: absolute !important; /* Changed from fixed to absolute */ } .auth-toggles .btn-icon { width: 40px !important; height: 40px !important; } }
 /* Home 2 Refinements */ .btn-hero { min-width: 220px; } .expert-img { max-height: 400px; object-fit: cover; width: 100%; } .success-img { max-height: 350px; object-fit: cover; width: 100%; }
 /* Dark Mode FAQ Overrides */ .dark .accordion-button, .dark .accordion-body, .dark .accordion-item h2, .dark .accordion-header button { color: var(--white) !important; } .dark .accordion-button::after { filter: invert(1) brightness(2); }
+
+
+/* Enterprise FAQ Section - Dark Mode Polish */
+.dark .enterprise-faq-section .accordion-item {
+    background-color: transparent !important;
+    border-color: var(--gray-800) !important;
+}
+
+.dark .enterprise-faq-section .accordion-button {
+    background-color: transparent !important;
+}
+
+.dark .enterprise-faq-section .accordion-button:not(.collapsed) {
+    background-color: rgba(10, 102, 194, 0.1) !important;
+}

@@ -26,6 +26,17 @@ function initMobileMenu() {
     navbarCollapse.addEventListener('hide.bs.collapse', () => {
         document.body.classList.remove('overflow-hidden');
     });
+
+    // Handle case where window is resized while menu is open
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1024 && document.body.classList.contains('overflow-hidden')) {
+            document.body.classList.remove('overflow-hidden');
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+            if (bsCollapse) {
+                bsCollapse.hide();
+            }
+        }
+    });
 }
 
 // Password Visibility Toggle
