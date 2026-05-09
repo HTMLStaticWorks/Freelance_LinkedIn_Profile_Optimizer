@@ -486,11 +486,10 @@ footer.bg-light {
 
 footer.bg-light a {
     color: var(--gray-600) !important;
+    text-align: center;
 }
 
-footer.bg-light a:hover {
-    color: var(--primary) !important;
-}
+
 
 /* Social Icons Hover */
 .social-icon {
@@ -591,7 +590,7 @@ footer.bg-light a:hover {
 
 /* Auth Page Toggles */
 .auth-toggles {
-    position: fixed;
+    position: absolute;
     top: 25px;
     right: 25px;
     display: flex;
@@ -751,26 +750,40 @@ footer.bg-light a:hover {
     color: var(--white) !important;
 }
 
-/* Footer Icon Alignment */
-footer .d-flex.gap-2.mt-4 {
-    justify-content: center !important;
-    margin-bottom: 2rem;
-}
-
-/* Center footer content on mobile */
-@media (max-width: 991px) {
-    footer .col-lg-3 {
-        text-align: center !important;
-    }
-
-    footer .navbar-brand {
-        justify-content: center !important;
-    }
+/* Footer Social Icons */
+.social-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-100);
+    color: var(--secondary);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .social-icon:hover {
     background-color: var(--primary) !important;
     color: white !important;
+    transform: translateY(-3px);
+}
+
+.social-icon i {
+    font-size: 1rem;
+    color: inherit;
+}
+
+/* Center footer content on mobile only */
+@media (max-width: 991px) {
+    footer .col-lg-3 {
+        text-align: center !important;
+    }
+
+    footer .d-flex.gap-2.mt-4 {
+        justify-content: center !important;
+    }
 }
 
 /* Social Buttons Nice Design */
@@ -849,12 +862,238 @@ body.overflow-hidden {
 }
 
 /* Case Study Image Refinement */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+    color: white !important;
+}
+
+.dark .text-secondary {
+    color: white !important;
+}
+
+.dark .bg-light {
+    background-color: #050505 !important;
+}
+
+.dark .card {
+    background-color: #000 !important;
+    border-color: var(--gray-800) !important;
+}
+
+/* Logo Fix in Dark Mode */
+.dark .navbar-brand span {
+    color: white !important;
+}
+
+.dark footer .navbar-brand span {
+    color: white !important;
+}
+
+/* Auth Card Dark Mode Polish */
+.dark .auth-card {
+    background: #000 !important;
+    border-color: var(--gray-800) !important;
+}
+
+.dark .auth-card .form-control {
+    background: #111 !important;
+    border: 1px solid var(--gray-800) !important;
+    color: white !important;
+}
+
+.dark .auth-card .form-label,
+.dark .auth-card .text-muted,
+.dark .auth-card p,
+.dark .auth-card .form-check-label {
+    color: var(--gray-400) !important;
+}
+
+.dark .auth-card h1 {
+    color: white !important;
+}
+
+.dark .navbar-brand span,
+.dark .auth-card .navbar-brand span {
+    color: white !important;
+}
+
+/* Dark Mode Placeholders */
+.dark ::placeholder {
+    color: var(--gray-500) !important;
+}
+
+.dark .form-control::placeholder {
+    color: var(--gray-500) !important;
+}
+
+.dark footer.bg-light {
+    background-color: #000 !important;
+    color: var(--gray-100) !important;
+    border-top-color: #111 !important;
+}
+
+.dark footer.bg-light a {
+    color: var(--gray-200) !important;
+}
+
+.dark footer.bg-light a:hover {
+    color: var(--white) !important;
+}
+
+/* Footer Social Icons */
+.social-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-100);
+    color: var(--secondary);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--primary) !important;
+    color: white !important;
+    transform: translateY(-3px);
+}
+
+.social-icon i {
+    font-size: 1rem;
+    color: inherit;
+}
+
+/* Center footer content on mobile only */
+@media (max-width: 991px) {
+    footer .col-lg-3 {
+        text-align: center !important;
+    }
+
+    footer .d-flex.gap-2.mt-4 {
+        justify-content: center !important;
+    }
+}
+
+/* Social Buttons Nice Design */
+.btn-social {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--gray-200) !important;
+    background: white;
+    width: 52px;
+    height: 52px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px !important;
+    padding: 0 !important;
+}
+
+.btn-social:hover {
+    background-color: var(--gray-50);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: var(--primary) !important;
+}
+
+.dark .btn-social {
+    background: #0a0a0a !important;
+    border-color: var(--gray-800) !important;
+    color: white !important;
+}
+
+.dark .btn-social:hover {
+    background: #111 !important;
+    border-color: var(--primary) !important;
+}
+
+/* Scroll Lock for Mobile Menu */
+body.overflow-hidden {
+    overflow: hidden !important;
+}
+
+/* LinkedIn Expert Badge - Perfect Circle */
+.badge-linkedin {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    border: 4px solid white;
+    border-radius: 50% !important;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.badge-linkedin i {
+    font-size: 0.9rem;
+    color: white;
+}
+
+.dark .badge-linkedin {
+    border-color: #000;
+}
+
+/* Preserve Hero Backgrounds on Internal Pages */
+.dark section.bg-primary,
+.dark .bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.dark section.bg-primary .text-white,
+.dark section.bg-primary h1,
+.dark section.bg-primary p {
+    color: white !important;
+}
+
 .case-study-img {
     max-height: 250px;
     object-fit: contain;
     width: 100%;
-}/ * 
- 
+}
 
- 
- 
+/* Case Study Image Refinement */
+.case-study-img {
+    max-height: 250px;
+    object-fit: contain;
+    width: 100%;
+}
+
+/* Extra Spacing Utilities */
+.py-6 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.py-7 {
+    padding-top: 7rem !important;
+    padding-bottom: 7rem !important;
+}
+
+/* Recruiter Image Refinement */
+.recruiter-img {
+    max-height: 350px;
+    object-fit: contain;
+    width: 100%;
+}
+
+/* Auth Page Refinements */
+.auth-page { background-color: var(--gray-50); min-height: 100vh; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; padding: 40px 15px !important; position: relative !important; }
+.auth-page .navbar-brand, .auth-page .navbar-brand:hover, .auth-page .text-center .navbar-brand:hover { text-decoration: none !important; }
+.auth-card { width: 100%; background: white; border-radius: 40px; border: 1px solid var(--gray-100); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); padding: 50px; position: relative; z-index: 1; }
+.auth-card-login { max-width: 450px !important; }
+.auth-card-register { max-width: 500px !important; }
+.auth-toggles { position: absolute !important; top: 30px !important; right: 30px !important; display: flex !important; gap: 15px !important; z-index: 9999 !important; }
+.auth-toggles .btn-icon { width: 46px !important; height: 46px !important; background: white !important; border: 1px solid rgba(0,0,0,0.1) !important; color: #0A2640 !important; border-radius: 50% !important; display: flex !important; align-items: center !important; justify-content: center !important; box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important; transition: all 0.3s ease !important; }
+@media (max-width: 575px) { .auth-page { justify-content: flex-start !important; padding-top: 100px !important; padding-left: 10px !important; padding-right: 10px !important; } .auth-card { padding: 30px 18px !important; /* Reduced padding to increase input width */ } .auth-toggles { top: 20px !important; right: 20px !important; gap: 10px !important; position: absolute !important; /* Changed from fixed to absolute */ } .auth-toggles .btn-icon { width: 40px !important; height: 40px !important; } }
+/* Home 2 Refinements */ .btn-hero { min-width: 220px; } .expert-img { max-height: 400px; object-fit: cover; width: 100%; } .success-img { max-height: 350px; object-fit: cover; width: 100%; }
+/* Dark Mode FAQ Overrides */ .dark .accordion-button, .dark .accordion-body, .dark .accordion-item h2, .dark .accordion-header button { color: var(--white) !important; } .dark .accordion-button::after { filter: invert(1) brightness(2); }
