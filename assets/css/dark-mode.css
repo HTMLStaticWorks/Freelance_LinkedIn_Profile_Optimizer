@@ -1,0 +1,69 @@
+/* 
+ * Freelance LinkedIn Profile Optimizer 
+ * Dark Mode Styles
+ */
+
+.dark {
+    --white: #000000;
+    --gray-50: #111111;
+    --gray-100: #1F2937;
+    --gray-200: #374151;
+    --gray-300: #4B5563;
+    --gray-400: #9CA3AF;
+    --gray-500: #D1D5DB;
+    --gray-600: #E5E7EB;
+    --gray-700: #F3F4F6;
+    --gray-800: #F9FAFB;
+    --gray-900: #FFFFFF;
+    
+    --secondary: #F5F5F5;
+}
+
+.dark body {
+    background-color: var(--white);
+    color: var(--gray-700);
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: var(--gray-900);
+}
+
+.dark header.scrolled {
+    background: rgba(0, 0, 0, 0.98);
+    border-bottom: 1px solid #374151;
+}
+
+.dark .card {
+    background-color: #111111;
+    border: 1px solid #374151;
+}
+
+.dark .text-secondary {
+    color: var(--gray-300) !important;
+}
+
+.dark .navbar-brand .text-secondary,
+.dark footer .navbar-brand .text-secondary {
+    color: var(--secondary) !important;
+}
+
+.dark input, .dark textarea, .dark select,
+.dark .form-control,
+.dark .form-select,
+.dark .form-control.bg-light,
+.dark .form-control.bg-white,
+.dark .form-select.bg-light,
+.dark .form-select.bg-white {
+    background-color: #111 !important;
+    border-color: #374151 !important;
+    color: #F5F5F5 !important;
+}
+
+.dark .btn-secondary {
+    background-color: #1f2937;
+    color: #F5F5F5;
+}
+
+.dark .btn-secondary:hover {
+    background-color: var(--gray-200);
+}

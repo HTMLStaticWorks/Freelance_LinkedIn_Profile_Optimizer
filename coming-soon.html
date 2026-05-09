@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | LinkedIn Profile Optimizer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        body { background-color: var(--secondary); color: white; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .countdown-item { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 30px; padding: 30px; }
+        .bg-glow { position: absolute; top: 0; right: 0; width: 600px; height: 600px; background: rgba(10, 102, 194, 0.15); filter: blur(120px); border-radius: 50%; z-index: -1; }
+    </style>
+</head>
+<body class="font-body text-center">
+
+    <div class="bg-glow"></div>
+    <div class="container py-5 position-relative">
+        <!-- Logo -->
+        <div class="mb-5 text-center">
+            <a href="index.html" class="d-flex align-items-center justify-content-center gap-2 text-decoration-none">
+                <div class="bg-primary p-2 rounded-3">
+                    <i data-lucide="briefcase" class="w-8 h-8 text-white"></i>
+                </div>
+                <span class="h6 fw-bold font-heading text-white text-uppercase mb-0">Optimizer</span>
+            </a>
+        </div>
+
+        <h1 class="display-3 fw-bold mb-4 font-heading">Elevating Career Branding <br> <span class="text-primary italic">Coming Soon</span></h1>
+        <p class="lead text-muted max-w-2xl mx-auto mb-5">We're building the most advanced LinkedIn optimization platform for executives. Join the waitlist.</p>
+
+        <!-- Countdown -->
+        <div class="row g-4 justify-content-center mb-5">
+            <div class="col-6 col-md-2">
+                <div class="countdown-item">
+                    <div class="h2 fw-bold mb-0">12</div>
+                    <small class="text-uppercase tracking-widest opacity-50 x-small">Days</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="countdown-item">
+                    <div class="h2 fw-bold mb-0">08</div>
+                    <small class="text-uppercase tracking-widest opacity-50 x-small">Hours</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="countdown-item">
+                    <div class="h2 fw-bold mb-0">45</div>
+                    <small class="text-uppercase tracking-widest opacity-50 x-small">Mins</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="countdown-item">
+                    <div class="h2 fw-bold mb-0">32</div>
+                    <small class="text-uppercase tracking-widest opacity-50 x-small">Secs</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <form class="max-w-md mx-auto d-flex flex-column flex-md-row gap-3">
+            <input type="email" class="form-control form-control-lg bg-white bg-opacity-10 border-0 text-white rounded-pill px-4" placeholder="Enter your email">
+            <button class="btn btn-primary btn-lg rounded-pill px-5">Notify Me</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
