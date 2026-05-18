@@ -1147,11 +1147,20 @@ body.overflow-hidden {
     width: 100%;
     background: white;
     border-radius: 40px;
-    border: 1px solid var(--gray-100);
+    border: 1px solid var(--gray-300);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
     padding: 50px;
     position: relative;
     z-index: 1;
+}
+
+.auth-card .form-control {
+    border: 1px solid var(--gray-200) !important;
+}
+
+.auth-card .form-control:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 0.25rem rgba(10, 102, 194, 0.25) !important;
 }
 
 .auth-card-login {
