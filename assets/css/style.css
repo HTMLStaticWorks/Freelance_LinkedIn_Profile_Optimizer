@@ -161,7 +161,30 @@ h5,
 h6 {
     font-family: 'Poppins', sans-serif;
     color: var(--secondary);
-    font-weight: 700;
+    font-weight: 500;
+}
+
+.fw-bold {
+    font-weight: 500 !important;
+}
+
+/* Avoid solid background colors, use lighter shades */
+section.bg-secondary, 
+.bg-secondary.text-white {
+    background-color: var(--gray-100) !important;
+    color: var(--gray-800) !important;
+}
+
+section.bg-secondary h1, 
+section.bg-secondary h2, 
+section.bg-secondary h3, 
+section.bg-secondary h4, 
+section.bg-secondary h5, 
+section.bg-secondary h6,
+section.bg-secondary p,
+section.bg-secondary span,
+section.bg-secondary li {
+    color: var(--gray-800) !important;
 }
 
 /* Typography Utilities */
@@ -206,13 +229,6 @@ header.scrolled nav {
     background-color: #000 !important;
 }
 
-
-.dark .navbar-brand .text-secondary,
-.dark .navbar-brand a,
-.dark .navbar-brand span,
-.dark footer .navbar-brand span {
-    color: #fff !important;
-}
 
 .dark .navbar-brand i,
 .dark .navbar-brand svg,
@@ -476,6 +492,7 @@ header.scrolled nav {
 }
 
 @media (max-width: 1024px) {
+
     /* Mobile Navigation Visibility */
     .d-nav-desktop {
         display: none !important;
@@ -720,9 +737,6 @@ footer.bg-light a {
     color: white !important;
 }
 
-.dark footer .navbar-brand span {
-    color: white !important;
-}
 
 /* Auth Card Dark Mode Polish */
 .dark .auth-card {
@@ -747,10 +761,6 @@ footer.bg-light a {
     color: white !important;
 }
 
-.dark .navbar-brand span,
-.dark .auth-card .navbar-brand span {
-    color: white !important;
-}
 
 /* Dark Mode Placeholders */
 .dark ::placeholder {
@@ -921,9 +931,7 @@ body.overflow-hidden .sticky-top {
     color: white !important;
 }
 
-.dark footer .navbar-brand span {
-    color: white !important;
-}
+
 
 /* Auth Card Dark Mode Polish */
 .dark .auth-card {
@@ -948,10 +956,7 @@ body.overflow-hidden .sticky-top {
     color: white !important;
 }
 
-.dark .navbar-brand span,
-.dark .auth-card .navbar-brand span {
-    color: white !important;
-}
+
 
 /* Dark Mode Placeholders */
 .dark ::placeholder {
@@ -1116,22 +1121,125 @@ body.overflow-hidden {
 
 /* Recruiter Image Refinement */
 .recruiter-img {
-    max-height: 350px;
     object-fit: contain;
     width: 100%;
 }
 
 /* Auth Page Refinements */
-.auth-page { background-color: var(--gray-50); min-height: 100vh; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; padding: 40px 15px !important; position: relative !important; }
-.auth-page .navbar-brand, .auth-page .navbar-brand:hover, .auth-page .text-center .navbar-brand:hover { text-decoration: none !important; }
-.auth-card { width: 100%; background: white; border-radius: 40px; border: 1px solid var(--gray-100); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); padding: 50px; position: relative; z-index: 1; }
-.auth-card-login { max-width: 450px !important; }
-.auth-card-register { max-width: 500px !important; }
-.auth-toggles { position: absolute !important; top: 30px !important; right: 30px !important; display: flex !important; gap: 15px !important; z-index: 9999 !important; }
-.auth-toggles .btn-icon { width: 46px !important; height: 46px !important; background: white !important; border: 1px solid rgba(0,0,0,0.1) !important; color: #0A2640 !important; border-radius: 50% !important; display: flex !important; align-items: center !important; justify-content: center !important; box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important; transition: all 0.3s ease !important; }
-@media (max-width: 575px) { .auth-page { justify-content: flex-start !important; padding-top: 100px !important; padding-left: 10px !important; padding-right: 10px !important; } .auth-card { padding: 30px 18px !important; /* Reduced padding to increase input width */ } .auth-toggles { top: 20px !important; right: 20px !important; gap: 10px !important; position: absolute !important; /* Changed from fixed to absolute */ } .auth-toggles .btn-icon { width: 40px !important; height: 40px !important; } }
-/* Home 2 Refinements */ .btn-hero { min-width: 220px; } .expert-img { max-height: 400px; object-fit: cover; width: 100%; } .success-img { max-height: 350px; object-fit: cover; width: 100%; }
-/* Dark Mode FAQ Overrides */ .dark .accordion-button, .dark .accordion-body, .dark .accordion-item h2, .dark .accordion-header button { color: var(--white) !important; } .dark .accordion-button::after { filter: invert(1) brightness(2); }
+.auth-page {
+    background-color: var(--gray-50);
+    min-height: 100vh;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 40px 15px !important;
+    position: relative !important;
+}
+
+.auth-page .navbar-brand,
+.auth-page .navbar-brand:hover,
+.auth-page .text-center .navbar-brand:hover {
+    text-decoration: none !important;
+}
+
+.auth-card {
+    width: 100%;
+    background: white;
+    border-radius: 40px;
+    border: 1px solid var(--gray-100);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-card-login {
+    max-width: 450px !important;
+}
+
+.auth-card-register {
+    max-width: 500px !important;
+}
+
+.auth-toggles {
+    position: absolute !important;
+    top: 30px !important;
+    right: 30px !important;
+    display: flex !important;
+    gap: 15px !important;
+    z-index: 9999 !important;
+}
+
+.auth-toggles .btn-icon {
+    width: 46px !important;
+    height: 46px !important;
+    background: white !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    color: #0A2640 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease !important;
+}
+
+@media (max-width: 575px) {
+    .auth-page {
+        justify-content: flex-start !important;
+        padding-top: 100px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .auth-card {
+        padding: 30px 18px !important;
+        /* Reduced padding to increase input width */
+    }
+
+    .auth-toggles {
+        top: 20px !important;
+        right: 20px !important;
+        gap: 10px !important;
+        position: absolute !important;
+        /* Changed from fixed to absolute */
+    }
+
+    .auth-toggles .btn-icon {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+/* Home 2 Refinements */
+.btn-hero {
+    min-width: 220px;
+}
+
+.expert-img {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.success-img {
+    max-height: 350px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Dark Mode FAQ Overrides */
+.dark .accordion-button,
+.dark .accordion-body,
+.dark .accordion-item h2,
+.dark .accordion-header button {
+    color: var(--white) !important;
+}
+
+.dark .accordion-button::after {
+    filter: invert(1) brightness(2);
+}
 
 
 /* Enterprise FAQ Section - Dark Mode Polish */
@@ -1146,4 +1254,15 @@ body.overflow-hidden {
 
 .dark .enterprise-faq-section .accordion-button:not(.collapsed) {
     background-color: rgba(10, 102, 194, 0.1) !important;
+}
+
+/* Website name color: blue in both light and dark modes */
+.navbar-brand span,
+.dark .navbar-brand span {
+    color: var(--primary) !important;
+}
+
+/* Blog page container outlines in dark mode */
+.dark .blog-page .card {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
